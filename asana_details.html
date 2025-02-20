@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asana Details</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 20px;
+            margin: 0;
+        }
+
+        /* Asana Details Container */
+        .asana-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        /* Asana Image */
+        .asana-details img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        /* Headings */
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #007BFF;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        /* Description */
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Benefits List */
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Button Styles */
+        .btn {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Video Iframe */
+        iframe {
+            margin-top: 20px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .asana-details {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h3 {
+                font-size: 1.25rem;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="asana-details">
+        <h1 id="asana-name">Loading...</h1>
+        <img id="asana-image" src="" alt="Asana Image">
+        <p id="asana-description">Loading description...</p>
+        <h3>Benefits:</h3>
+        <ul id="asana-benefits">
+            <li>Loading benefits...</li>
+        </ul>
+        <h3>Video Tutorial:</h3>
+        <iframe id="asana-video" width="560" height="315" src="" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+        <br><br>
+        <button class="btn" onclick="goBack()">Back</button>
+    </div>
+
+    <script>
+        function getAsanaDetails() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const asanaName = urlParams.get('asana');
+
+            // Fetching asana data from the JSON file
+            fetch('asana_data.json')
+                .then(response => response.json())
+                .then(data => {
+                    const asanaData = data[asanaName];
+
+                    if (asanaData) {
+                        // Displaying the fetched asana data
+                        document.getElementById('asana-name').textContent = asanaData.name;
+                        document.getElementById('asana-image').src = asanaData.image;
+                        document.getElementById('asana-description').textContent = asanaData.description;
+
+                        // Displaying the benefits as a list
+                        const benefitsList = document.getElementById('asana-benefits');
+                        benefitsList.innerHTML = ''; // Clear any previous content
+                        asanaData.benefits.forEach(benefit => {
+                            const li = document.createElement('li');
+                            li.textContent = benefit;
+                            benefitsList.appendChild(li);
+                        });
+
+                        // Set the video link with autoplay
+                        document.getElementById('asana-video').src = asanaData.videoLink;
+                    } else {
+                        // Handle case where asana data is not found
+                        document.getElementById('asana-name').textContent = 'Asana not found';
+                    }
+                })
+                .catch(error => console.error('Error fetching asana data:', error));
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+
+        window.onload = getAsanaDetails;
+    </script>
+</body>
+
+</html>

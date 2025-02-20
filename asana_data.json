@@ -1,0 +1,81 @@
+{
+  "Bhujangasana": {
+    "name": "Bhujangasana",
+    "image": "Photos/Bhujangasana.jpg",
+    "description": "Bhujangasana (Cobra Pose) is a backbend posture that stretches the chest, strengthens the spine, and opens the lungs. This pose can relieve tension and help in improving flexibility and posture. It is beneficial for toning the muscles of the abdomen and stimulating the organs in the abdominal region. The pose also helps reduce stress and fatigue.",
+    "benefits": [
+      "Improves flexibility of the spine",
+      "Tones the muscles of the abdomen",
+      "Stimulates the organs in the abdominal region",
+      "Opens the chest and relieves tension",
+      "Relieves stress and fatigue"
+    ],
+    "videoLink": "https://www.youtube.com/embed/-HgeZztTSec?autoplay=1"
+  },
+  "Katichakrasana": {
+    "name": "Katichakrasana",
+    "image": "Photos/katichakrasana.jpg",
+    "description": "Katichakrasana (Torso Rotation Pose) helps in improving flexibility and relieving tension in the spine. This posture enhances the movement of the torso, helping with spinal health and easing lower back pain. It also strengthens the arms, shoulders, and legs. Katichakrasana increases circulation and encourages better digestion.",
+    "benefits": [
+      "Improves spinal flexibility",
+      "Relieves lower back tension",
+      "Strengthens arms, shoulders, and legs",
+      "Increases circulation",
+      "Encourages better digestion"
+    ],
+    "videoLink": "https://www.youtube.com/embed/SaVzyl7o45g?autoplay=1"
+  },
+  "Kurmasana": {
+    "name": "Kurmasana",
+    "image": "Photos/Kurmasana.jpg",
+    "description": "Kurmasana (Tortoise Pose) is a forward bend that improves flexibility and strengthens the arms, shoulders, and back. This asana stretches the groin, hips, and thighs, and it also enhances the flow of energy in the body. It calms the mind and aids in improving concentration.",
+    "benefits": [
+      "Improves flexibility of the hips, groin, and thighs",
+      "Strengthens arms, shoulders, and back",
+      "Enhances blood circulation",
+      "Helps calm the mind",
+      "Improves concentration and focus"
+    ],
+    "videoLink": "https://www.youtube.com/embed/e9GPMkcUwIU?autoplay=1"
+  },
+  "Matsyasana": {
+    "name": "Matsyasana",
+    "image": "Photos/Matsyasana.jpg",
+    "description": "Matsyasana (Fish Pose) opens up the chest and enhances the flexibility of the spine. This asana improves posture, stretches the muscles of the chest, and helps to relieve tension in the neck and back. It also increases the capacity of the lungs and improves respiratory function.",
+    "benefits": [
+      "Opens the chest and improves posture",
+      "Increases lung capacity",
+      "Relieves tension in the neck and back",
+      "Improves flexibility of the spine",
+      "Enhances respiratory function"
+    ],
+    "videoLink": "https://www.youtube.com/embed/Z9-HeCunaTI?autoplay=1"
+  },
+  "Setu Bandha Sarvangasana": {
+    "name": "Setu Bandha Sarvangasana",
+    "image": "Photos/Setu Bandha Sarvangasana.jpg",
+    "description": "Setu Bandha Sarvangasana (Bridge Pose) is a backbend posture that strengthens the lower back and stretches the chest, neck, and spine. This asana helps improve circulation and relieve stress. It also aids in stimulating the abdominal organs and can help alleviate anxiety and depression.",
+    "benefits": [
+      "Strengthens the lower back",
+      "Stretches the chest, neck, and spine",
+      "Improves circulation",
+      "Relieves stress and tension",
+      "Stimulates the abdominal organs",
+      "Alleviates anxiety and depression"
+    ],
+    "videoLink": "https://www.youtube.com/embed/xIMRYcA7TkA?autoplay=1"
+  },
+  "Pada Rajakapotasana": {
+    "name": "Pada Rajakapotasana",
+    "image": "Photos/Pada Rajakapotasana.jpg",
+    "description": "Pada Rajakapotasana (King Pigeon Pose) is a deep backbend and hip opener that stretches the quadriceps, hip flexors, and chest. It helps in improving flexibility, opens up the shoulders and chest, and can also improve posture and relieve lower back pain.",
+    "benefits": [
+      "Opens the chest, shoulders, and hips",
+      "Improves flexibility of the spine",
+      "Stretches the quadriceps and hip flexors",
+      "Relieves lower back pain",
+      "Improves posture"
+    ],
+    "videoLink": "https://www.youtube.com/embed/S2q3csSzdsA?autoplay=1"
+  }
+}
